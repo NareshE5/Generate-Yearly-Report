@@ -1,0 +1,21 @@
+{
+	"OrchestratorQueueName":"Generate Yearly Report",
+	"OrchestratorQueueFolder":"Shared",
+        "FolderPath": "D:\\Users\\BOT_ID\\Downloads\\",
+	"website":"https://acme-test.uipath.com/",
+	"Credentials":"ACME",
+	"logF_BusinessProcessName":"Framework",
+	"MaxConsecutiveSystemExceptions":"2",
+	"DownloadReports":"Data\\Temp",
+	"Is_Dispatcher":"Y",
+	"Is_Performer":"Y",
+	"WIID":"",
+	"Description":"",
+	"Type":"",
+ 	"Date":"",
+	"TaxID":"",
+	"UploadID":"",
+	"UploadStatus":"",
+	"Status":"",
+	"Reason":""
+}
