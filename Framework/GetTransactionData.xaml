@@ -11,7 +11,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>970,4951</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1355,5118</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>GetTransactionData_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -97,9 +97,10 @@
       <AssemblyReference>UiPath.Platform</AssemblyReference>
       <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
       <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Get a transaction item from a specified source (e.g., Orchestrator queues, spreadsheets, databases, mailboxes or web APIs). &#xA;&#xA;If there are no transaction items remaining, out_TransactionItem is set to Nothing, which leads to the End Process state. &#xA;&#xA;For cases in which there is only a single transaction (i.e., a linear process), use an If activity to check whether the argument in_TransactionNumber has the value 1 (meaning it is the first and only transaction) and assign the transaction item to out_TransactionItem. For any other value of in_TransactionNumber, out_TransactionItem should be set to Nothing.&#xA;&#xA;If there are multiple transactions, use the argument in_TransactionNumber as an index to retrieve the correct transaction to be processed. If there are no more transactions left, it is necessary to set out_TransactionItem to Nothing, thus ending the process." DisplayName="Get Transaction Data" sap:VirtualizedContainerService.HintSize="980,4886" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Get a transaction item from a specified source (e.g., Orchestrator queues, spreadsheets, databases, mailboxes or web APIs). &#xA;&#xA;If there are no transaction items remaining, out_TransactionItem is set to Nothing, which leads to the End Process state. &#xA;&#xA;For cases in which there is only a single transaction (i.e., a linear process), use an If activity to check whether the argument in_TransactionNumber has the value 1 (meaning it is the first and only transaction) and assign the transaction item to out_TransactionItem. For any other value of in_TransactionNumber, out_TransactionItem should be set to Nothing.&#xA;&#xA;If there are multiple transactions, use the argument in_TransactionNumber as an index to retrieve the correct transaction to be processed. If there are no more transactions left, it is necessary to set out_TransactionItem to Nothing, thus ending the process." DisplayName="Get Transaction Data" sap:VirtualizedContainerService.HintSize="1365,4973" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="Workitems_PageExists" />
       <Variable x:TypeArguments="sd:DataTable" Name="Dt_WorkItems" />
@@ -111,15 +112,15 @@
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message Get Transaction Item" sap:VirtualizedContainerService.HintSize="938,51" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Get the transaction item&quot;]">
+    <ui:LogMessage DisplayName="Log Message Get Transaction Item" sap:VirtualizedContainerService.HintSize="1323,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Get the transaction item&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <TryCatch DisplayName="Try Catch Get transaction item" sap:VirtualizedContainerService.HintSize="938,441" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+    <TryCatch DisplayName="Try Catch Get transaction item" sap:VirtualizedContainerService.HintSize="1323,441" sap2010:WorkflowViewState.IdRef="TryCatch_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -159,7 +160,7 @@
         </Catch>
       </TryCatch.Catches>
     </TryCatch>
-    <If Condition="[out_TransactionItem is Nothing And in_Config(&quot;Is_Dispatcher&quot;).ToString.Equals(&quot;Y&quot;)]" sap:VirtualizedContainerService.HintSize="938,3168" sap2010:WorkflowViewState.IdRef="If_2">
+    <If Condition="[out_TransactionItem is Nothing And in_Config(&quot;Is_Dispatcher&quot;).ToString.Equals(&quot;Y&quot;)]" sap:VirtualizedContainerService.HintSize="1323,3230" sap2010:WorkflowViewState.IdRef="If_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -167,13 +168,14 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <If.Then>
-        <Sequence sap:VirtualizedContainerService.HintSize="902,2981" sap2010:WorkflowViewState.IdRef="Sequence_8">
+        <Sequence sap:VirtualizedContainerService.HintSize="902,3072" sap2010:WorkflowViewState.IdRef="Sequence_8">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="860,2535" sap2010:WorkflowViewState.IdRef="TryCatch_4">
+          <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="860,2626" sap2010:WorkflowViewState.IdRef="TryCatch_4">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -181,7 +183,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <TryCatch.Try>
-              <Sequence sap:VirtualizedContainerService.HintSize="822,2308" sap2010:WorkflowViewState.IdRef="Sequence_26">
+              <Sequence sap:VirtualizedContainerService.HintSize="822,2399" sap2010:WorkflowViewState.IdRef="Sequence_26">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -236,13 +238,13 @@
                     <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/" DesignTimeRectangle="140, 450, 1000, 46" FriendlyName="'Work Items'" FullSelectorArgument="&lt;webctrl idx='2' parentid='dashmenu' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' parentid='dashmenu' tag='DIV' aaname='                                                  ' check:text='Work Items' /&gt;" Guid="4793dad1-5f54-4992-84f1-c53d0ef85134" ImageBase64="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" InformativeScreenshot="17ed3dfcc8ee6995285a0d309cd3d7f1.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ACME System 1 - Dashboard' /&gt;" SearchSteps="Selector, FuzzySelector" />
                   </uix:NCheckState.Target>
                 </uix:NCheckState>
-                <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application/Browser" sap:VirtualizedContainerService.HintSize="780,1198" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="5fe1a2bf-cd69-4a93-95f3-e515c4832384" Version="V1">
+                <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application/Browser" sap:VirtualizedContainerService.HintSize="780,1289" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="5fe1a2bf-cd69-4a93-95f3-e515c4832384" Version="V1">
                   <uix:NApplicationCard.Body>
                     <ActivityAction x:TypeArguments="x:Object">
                       <ActivityAction.Argument>
                         <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                       </ActivityAction.Argument>
-                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="707,982" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="707,1073" sap2010:WorkflowViewState.IdRef="Sequence_25">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -263,21 +265,21 @@
                             <uix:TargetAnchorable DesignTimeRectangle="137, 417, 998, 431" FriendlyName="'Actions WIID'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;" Guid="d428c0ad-4744-4afa-9ee1-4a5794597666" InformativeScreenshot="bb4d51dfdad8448d186062a50587a7be.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ACME System 1 - Work Items' /&gt;" SearchSteps="Selector" />
                           </uix:NExtractData.Target>
                         </uix:NExtractData>
-                        <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[Dt_WorkItems]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="665,591" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+                        <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[Dt_WorkItems]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="665,682" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
                           <ui:ForEachRow.Body>
                             <ActivityAction x:TypeArguments="sd:DataRow">
                               <ActivityAction.Argument>
                                 <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                               </ActivityAction.Argument>
-                              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="631,470" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="631,561" sap2010:WorkflowViewState.IdRef="Sequence_24">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <If Condition="[CurrentRow(&quot;Type&quot;).Equals(&quot;WI4&quot;)]" sap:VirtualizedContainerService.HintSize="589,376" sap2010:WorkflowViewState.IdRef="If_4">
+                                <If Condition="[CurrentRow(&quot;Type&quot;).Equals(&quot;WI4&quot;)]" sap:VirtualizedContainerService.HintSize="589,467" sap2010:WorkflowViewState.IdRef="If_4">
                                   <If.Then>
-                                    <Sequence sap:VirtualizedContainerService.HintSize="272,217" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                                    <Sequence sap:VirtualizedContainerService.HintSize="272,308" sap2010:WorkflowViewState.IdRef="Sequence_22">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -293,6 +295,24 @@
                                           <InArgument x:TypeArguments="x:String" x:Key="Status">[CurrentRow("Status").ToString]</InArgument>
                                         </ui:AddQueueItem.ItemInformation>
                                       </ui:AddQueueItem>
+                                      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="230,51" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+                                        <ui:CommentOut.Body>
+                                          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="242,114" sap2010:WorkflowViewState.IdRef="Sequence_30">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <ui:Break sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Break_1" />
+                                          </Sequence>
+                                        </ui:CommentOut.Body>
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </ui:CommentOut>
                                     </Sequence>
                                   </If.Then>
                                   <If.Else>
@@ -367,16 +387,18 @@
         </Sequence>
       </If.Then>
       <If.Else>
-        <Sequence sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="Sequence_9">
+        <Sequence sap:VirtualizedContainerService.HintSize="376,176" sap2010:WorkflowViewState.IdRef="Sequence_9">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
+          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,84" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;naresh i am here &quot;]" />
         </Sequence>
       </If.Else>
     </If>
-    <If sap2010:Annotation.AnnotationText="This optional step can be used to include more information about a transaction item and it is used mainly for logging and visualization purposes.&#xA;For example, if transaction items are invoices, then out_TransactionID can be the invoice number, out_TransactionField1 can be the invoice date and out_TransactionField2 can be the invoice amount." Condition="[out_TransactionItem isNot Nothing]" DisplayName="If a new transaction item is retrieved, get additional information about it" sap:VirtualizedContainerService.HintSize="938,852" sap2010:WorkflowViewState.IdRef="If_1">
+    <If sap2010:Annotation.AnnotationText="This optional step can be used to include more information about a transaction item and it is used mainly for logging and visualization purposes.&#xA;For example, if transaction items are invoices, then out_TransactionID can be the invoice number, out_TransactionField1 can be the invoice date and out_TransactionField2 can be the invoice amount." Condition="[out_TransactionItem isNot Nothing]" DisplayName="If a new transaction item is retrieved, get additional information about it" sap:VirtualizedContainerService.HintSize="1323,852" sap2010:WorkflowViewState.IdRef="If_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>

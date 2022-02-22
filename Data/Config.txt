@@ -1,6 +1,10 @@
 {
 	"OrchestratorQueueName":"Generate Yearly Report",
 	"OrchestratorQueueFolder":"Shared",
+	"HubUrl":"https://api-dev.e5.ai/",
+	"ProcessName":"Generate Yearly Report 2021",
+	"HubCredentials":"AutomationHub",
+	"TaskName":"Generate Yearly Report 2021",
         "FolderPath": "D:\\Users\\BOT_ID\\Downloads\\",
 	"website":"https://acme-test.uipath.com/",
 	"Credentials":"ACME",

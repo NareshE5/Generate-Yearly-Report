@@ -3,6 +3,7 @@
   "description": "Creating Generate Yearly Report Performer",
   "main": "Main.xaml",
   "dependencies": {
+    "Element5.Core": "[1.2.26-alpha.1]",
     "UiPath.Credentials.Activities": "[2.0.0]",
     "UiPath.Excel.Activities": "[2.11.4]",
     "UiPath.Mail.Activities": "[1.13.1-preview]",
